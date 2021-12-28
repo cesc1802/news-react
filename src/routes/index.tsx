@@ -1,21 +1,35 @@
-import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { configRoutes } from "./config";
+import React from 'react';
 
-function AppRoutes() {
+import { BrowserRouter, Switch } from 'react-router-dom';
+import { RestrictedRoute } from '../components/restricted-route';
+import { Page404 } from '../pages/page-404';
+
+import { configRoutes } from './config';
+
+export const AppRoutes: React.FC = () => {
   return (
     <BrowserRouter>
       <Switch>
         {configRoutes.map(({ appRoutes, isPrivate, layout: MainLayout }, i) => {
           return appRoutes.map(
             ({ children, path, layout, ...props }, index) => {
-              return <Route {...props}>{children}</Route>;
+              return (
+                <RestrictedRoute
+                  isPrivate={isPrivate}
+                  path={path}
+                  layout={layout || MainLayout}
+                  {...props}
+                >
+                  {children}
+                </RestrictedRoute>
+              );
             }
           );
         })}
+        <RestrictedRoute>
+          <Page404 />
+        </RestrictedRoute>
       </Switch>
     </BrowserRouter>
   );
-}
-
-export default AppRoutes;
+};

@@ -1,23 +1,56 @@
+import React from 'react';
+
+import { RouteProps } from 'react-router-dom';
+import { MainLayout } from '../layouts/main';
+
 import Home from '../pages/home';
 
-export interface IRoute {
+import Login from '../pages/login';
+import PrivatePage from '../pages/private';
+
+export interface IRoute extends RouteProps {
   restricted?: boolean;
   layout?: React.ComponentType;
 }
+
+const privateRoutes: IRoute[] = [
+  {
+    children: <PrivatePage />,
+    path: '/private',
+  },
+];
+const publicRoutes: IRoute[] = [
+  {
+    children: <Home />,
+    exact: true,
+    path: '/',
+  },
+  {
+    children: <Login />,
+    path: '/login',
+    restricted: true,
+  },
+];
+const noLayoutRoutes: IRoute[] = [];
+
 interface IConfigRoutes {
-  appRoutes: any[];
+  appRoutes: IRoute[];
   isPrivate?: boolean;
   layout?: React.ComponentType;
 }
-const publicRoutes: any[] = [
-  {
-    children: <Home />,
-    path: '/',
-  },
-];
+
 export const configRoutes: IConfigRoutes[] = [
   {
+    appRoutes: privateRoutes,
+    isPrivate: true,
+    layout: MainLayout,
+  },
+  {
     appRoutes: publicRoutes,
-    // layout: MainLayout,
+
+    layout: MainLayout,
+  },
+  {
+    appRoutes: noLayoutRoutes,
   },
 ];
