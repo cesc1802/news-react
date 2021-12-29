@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import { RouteProps } from 'react-router-dom';
-import { MainLayout } from '../layouts/main';
+import { RouteProps } from "react-router-dom";
+import { MainLayout } from "../layouts/main";
 
-import Home from '../pages/home';
+import Home from "../pages/home";
 
-import Login from '../pages/login';
-import PrivatePage from '../pages/private';
+import Login from "../pages/login";
+import PrivatePage from "../pages/private";
 
 export interface IRoute extends RouteProps {
   restricted?: boolean;
@@ -16,18 +16,18 @@ export interface IRoute extends RouteProps {
 const privateRoutes: IRoute[] = [
   {
     children: <PrivatePage />,
-    path: '/private',
+    path: "/private",
   },
 ];
 const publicRoutes: IRoute[] = [
   {
     children: <Home />,
     exact: true,
-    path: '/',
+    path: "/",
   },
   {
     children: <Login />,
-    path: '/login',
+    path: "/login",
     restricted: true,
   },
 ];
@@ -39,7 +39,7 @@ interface IConfigRoutes {
   layout?: React.ComponentType;
 }
 
-export const configRoutes: IConfigRoutes[] = [
+export const routes: IConfigRoutes[] = [
   {
     appRoutes: privateRoutes,
     isPrivate: true,
