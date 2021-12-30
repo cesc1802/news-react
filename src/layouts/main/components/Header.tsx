@@ -1,7 +1,14 @@
-import React from 'react';
+import React from "react";
+import TopMenu from "../../../components/top-menu";
+import NavBar from "../../../components/nav";
 
 function Header() {
-  return <div>This is Header</div>;
+  return (
+    <React.Fragment>
+      <TopMenu />
+      <NavBar />
+    </React.Fragment>
+  );
 }
 
 export default Header;
