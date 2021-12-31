@@ -2,6 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .menu-wrapper {
+    @apply mx-4 my-auto box-border max-w-[1100px];
+  } 
+
+  .menu-wrapper > ul {
+    @apply relative list-none m-0 p-0 flex justify-center;
+  }
+
+  .menu-wrapper ul li {
+    @apply relative font-bold flex items-center m-0 p-0
+  }
+
+  /*this is text color menu*/
+  .menu-wrapper ul li a{
+    @apply w-full text-blue-800 leading-8 px-2 py-4 flex items-center
+  }
+
+  .menu-wrapper > ul > li > a span {
+    @apply ml-1
+  }
+  
+  .menu-wrapper > ul > li > a {
+    @apply uppercase
+  }
+  
+  .menu-wrapper ul ul li a {
+    @apply text-white justify-between border-b border-b-white
+  }
+  
+  .menu-wrapper ul li:hover > ul {
+    @apply block
+  }
+  
+
+  /*this is a background color of sub menu*/
+  .menu-wrapper ul li ul,
+  .menu-wrapper ul ul ul {
+    @apply m-0 p-0 hidden absolute top-full bg-blue-900
+  }
+  
+  .menu-wrapper ul ul ul {
+    @apply top-0 left-full
+  }
+  
+  .menu-wrapper ul ul li {
+    @apply w-[240px] 
+  }  
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
