@@ -1,10 +1,12 @@
 import React from "react";
-import Menu from "./Menu";
+import MenuBar from "../../../components/menu-bar";
+import TopMenu from "../../../components/top-menu";
 
 const Header: React.FC = () => {
   return (
     <header>
-      <Menu />
+      <TopMenu />
+      <MenuBar />
     </header>
   );
 };

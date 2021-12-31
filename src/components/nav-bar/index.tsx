@@ -1,8 +1,7 @@
-import { Icon } from "@material-ui/core";
 import React, { useMemo } from "react";
+import { IMenuItem, NavBarItems } from "./types";
+import { Icon } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import "./styles.css";
-import { IMenuItem } from "./types";
 
 const generateMenuItems = (length = 8, name = "Menu"): IMenuItem[] =>
   Array.from(Array(length)).map((_, index) => {
@@ -10,7 +9,10 @@ const generateMenuItems = (length = 8, name = "Menu"): IMenuItem[] =>
 
     const subMenu =
       name === "Menu" || (name === "Menu Item" && subMenuLength >= 5)
-        ? generateMenuItems(subMenuLength, name !== "Menu Item" ? "Menu Item" : "Sub Menu Item")
+        ? generateMenuItems(
+            subMenuLength,
+            name !== "Menu Item" ? "Menu Item" : "Sub Menu Item"
+          )
         : [];
 
     return {
@@ -19,29 +21,31 @@ const generateMenuItems = (length = 8, name = "Menu"): IMenuItem[] =>
     };
   });
 
-const Menu: React.FC = () => {
-  const menuItems = useMemo(() => generateMenuItems(), []);
-
+const NavBar: React.FC = () => {
   return (
-    <nav id="menu-wrapper">
+    <nav className="menu-wrapper">
       <ul>
-        {menuItems.map((menuItem, idx) => (
+        {NavBarItems.map((menuItem, idx) => (
           <li key={idx}>
             <Link to="#">
               {menuItem.displayText}
-              {!!menuItem.subMenu.length && <Icon fontSize="small">expand_more</Icon>}
+              {!!menuItem.subMenu?.length && (
+                <Icon fontSize="small">expand_more</Icon>
+              )}
             </Link>
-            {!!menuItem.subMenu.length && (
+            {!!menuItem.subMenu?.length && (
               <ul>
-                {menuItem.subMenu.map((subMenuItem, idx) => (
+                {menuItem.subMenu?.map((subMenuItem, idx) => (
                   <li key={idx}>
                     <Link to="#">
                       {subMenuItem.displayText}
-                      {!!subMenuItem.subMenu.length && <Icon fontSize="small">chevron_right</Icon>}
+                      {!!subMenuItem.subMenu?.length && (
+                        <Icon fontSize="small">chevron_right</Icon>
+                      )}
                     </Link>
-                    {!!subMenuItem.subMenu.length && (
+                    {!!subMenuItem.subMenu?.length && (
                       <ul>
-                        {subMenuItem.subMenu.map((subMenuItem, idx) => (
+                        {subMenuItem.subMenu?.map((subMenuItem, idx) => (
                           <li key={idx}>
                             <Link to="#">{subMenuItem.displayText}</Link>
                           </li>
@@ -59,4 +63,4 @@ const Menu: React.FC = () => {
   );
 };
 
-export default React.memo(Menu);
+export default React.memo(NavBar);
