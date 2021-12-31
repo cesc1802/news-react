@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
+import Menu from "./Menu";
 
-function Header() {
-  return <div>This is Header</div>;
-}
+const Header: React.FC = () => {
+  return (
+    <header>
+      <Menu />
+    </header>
+  );
+};
 
 export default Header;
