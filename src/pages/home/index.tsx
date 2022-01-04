@@ -1,7 +1,11 @@
 import React from "react";
-
+import ListHostNews from "../list-hotnews";
 function Home() {
-  return <div>This is a Home Pages</div>;
+  return (
+    <div className="">
+      <ListHostNews />
+    </div>
+  );
 }
 
 export default Home;
