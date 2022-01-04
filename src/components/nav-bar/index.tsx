@@ -27,7 +27,7 @@ const NavBar: React.FC = () => {
       <ul>
         {NavBarItems.map((menuItem, idx) => (
           <li key={idx}>
-            <Link to="#">
+            <Link className="hover:text-indigo-700" to="#">
               {menuItem.displayText}
               {!!menuItem.subMenu?.length && (
                 <Icon fontSize="small">expand_more</Icon>
@@ -37,7 +37,7 @@ const NavBar: React.FC = () => {
               <ul>
                 {menuItem.subMenu?.map((subMenuItem, idx) => (
                   <li key={idx}>
-                    <Link to="#">
+                    <Link className="hover:text-indigo-400" to="#">
                       {subMenuItem.displayText}
                       {!!subMenuItem.subMenu?.length && (
                         <Icon fontSize="small">chevron_right</Icon>
@@ -47,7 +47,9 @@ const NavBar: React.FC = () => {
                       <ul>
                         {subMenuItem.subMenu?.map((subMenuItem, idx) => (
                           <li key={idx}>
-                            <Link to="#">{subMenuItem.displayText}</Link>
+                            <Link className="hover:text-indigo-400" to="#">
+                              {subMenuItem.displayText}
+                            </Link>
                           </li>
                         ))}
                       </ul>

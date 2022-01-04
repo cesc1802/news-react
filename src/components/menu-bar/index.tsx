@@ -33,7 +33,7 @@ const MenuBar: React.FC = () => {
           <Icon>search</Icon>
         </div>
       </div>
-      <div className="w-auto h-10 bg-blue-800 border-b-2 border-b-amber-500"></div>
+      <div className="w-auto h-10 bg-indigo-700 border-b-2 border-b-amber-500"></div>
     </div>
   );
 };

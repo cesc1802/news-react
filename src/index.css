@@ -17,7 +17,7 @@
 
   /*this is text color menu*/
   .menu-wrapper ul li a{
-    @apply w-full text-blue-800 leading-8 px-2 py-4 flex items-center
+    @apply w-full text-indigo-500	 leading-8 px-2 py-4 flex items-center
   }
 
   .menu-wrapper > ul > li > a span {
@@ -40,7 +40,7 @@
   /*this is a background color of sub menu*/
   .menu-wrapper ul li ul,
   .menu-wrapper ul ul ul {
-    @apply m-0 p-0 hidden absolute top-full bg-blue-900
+    @apply m-0 p-0 hidden absolute top-full bg-indigo-700
   }
   
   .menu-wrapper ul ul ul {
