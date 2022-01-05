@@ -3,8 +3,8 @@ import HotNews, { TextHoverable } from "../../components/HotNews";
 
 const ListHotNews: React.FC = () => {
   return (
-    <div className="flex flex-wrap">
-      <div className="w-1/3">
+    <div className="flex flex-wrap gap-2">
+      <div className="">
         <HotNews
           url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
           rounded={true}
@@ -13,7 +13,7 @@ const ListHotNews: React.FC = () => {
         </HotNews>
       </div>
 
-      <div className="w-1/3">
+      <div className="">
         <HotNews
           url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
           rounded={true}
@@ -22,7 +22,7 @@ const ListHotNews: React.FC = () => {
         </HotNews>
       </div>
 
-      <div className="w-1/3">
+      <div className="">
         <HotNews
           url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
           rounded={true}
@@ -31,7 +31,7 @@ const ListHotNews: React.FC = () => {
         </HotNews>
       </div>
 
-      <div className="w-1/3">
+      <div className="">
         <HotNews
           url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
           rounded={true}
@@ -40,7 +40,7 @@ const ListHotNews: React.FC = () => {
         </HotNews>
       </div>
 
-      <div className="w-1/3">
+      <div className="">
         <HotNews
           url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
           rounded={true}
@@ -49,7 +49,7 @@ const ListHotNews: React.FC = () => {
         </HotNews>
       </div>
 
-      <div className="w-1/3">
+      <div className="">
         <HotNews
           url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
           rounded={true}
