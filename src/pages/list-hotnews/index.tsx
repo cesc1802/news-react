@@ -1,10 +1,10 @@
 import React from "react";
-import HotNews, { TextHoverable } from "../../components/hot-news";
+import HotNews, { TextHoverable } from "../../components/HotNews";
 
 const ListHotNews: React.FC = () => {
   return (
-    <div className="flex flex-col w-3/5">
-      <div className="flex">
+    <div className="flex flex-col">
+      <div className="flex justify-around">
         <div className="py-1 pr-1">
           <HotNews
             url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
@@ -33,7 +33,7 @@ const ListHotNews: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex">
+      <div className="flex justify-around">
         <div className="py-1 pr-1">
           <HotNews
             url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"

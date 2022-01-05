@@ -1,5 +1,5 @@
 import React from "react";
-import RecentNews from "../../components/recent-news";
+import RecentNews from "../../components/RecentNews";
 import { RecentNewsData } from "./types";
 
 const HotRecentNews: React.FC = () => {

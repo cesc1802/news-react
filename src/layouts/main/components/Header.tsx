@@ -1,6 +1,6 @@
 import React from "react";
-import MenuBar from "../../../components/menu-bar";
-import TopMenu from "../../../components/top-menu";
+import MenuBar from "../../../components/MenuBar";
+import TopMenu from "../../../components/TopMenu";
 
 const Header: React.FC = () => {
   return (
