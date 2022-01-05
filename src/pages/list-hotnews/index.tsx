@@ -3,7 +3,7 @@ import HotNews, { TextHoverable } from "../../components/hot-news";
 
 const ListHotNews: React.FC = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-3/5">
       <div className="flex">
         <div className="py-1 pr-1">
           <HotNews
