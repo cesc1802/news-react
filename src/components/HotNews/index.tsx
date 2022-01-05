@@ -1,9 +1,7 @@
 import React from "react";
 import { TextHoverableProps, ImageHoverableProps } from "./types";
 
-export const TextHoverable: React.FC<TextHoverableProps> = (
-  props: TextHoverableProps
-) => {
+export const TextHoverable: React.FC<TextHoverableProps> = (props: TextHoverableProps) => {
   const { text } = props;
 
   return (
@@ -17,12 +15,11 @@ const HotNews: React.FC<ImageHoverableProps> = (props: ImageHoverableProps) => {
   const { url, rounded, children } = props;
 
   return (
-    <div className="relative w-72 h-40">
+    <div className="relative">
       <img
-        className={
-          rounded ? "w-72 h-40 object-cover rounded-[15px]" : "w-72 h-40"
-        }
         src={url}
+        alt=""
+        className={rounded ? "w-full h-full object-cover rounded-[15px]" : "w-full h-full"}
       />
       {children}
     </div>
