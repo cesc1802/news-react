@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { BrowserRouter, Switch } from 'react-router-dom';
-import { RestrictedRoute } from '../components/restricted-route';
-import { Page404 } from '../pages/page-404';
+import { BrowserRouter, Switch } from "react-router-dom";
+import { RestrictedRoute } from "../components/RestrictedRoute";
+import { Page404 } from "../pages/page-404";
 
-import { configRoutes } from './config';
+import { configRoutes } from "./config";
 
 export const AppRoutes: React.FC = () => {
   return (

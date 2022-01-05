@@ -1,9 +1,12 @@
 import React from "react";
-import { BorderProps } from "./types";
+import { BorderProps, BorderType } from "./types";
 
 const Border: React.FC<BorderProps> = (props: BorderProps) => {
-  const { children } = props;
-  return <div className="rounded-full">{children}</div>;
+  const { type, children } = props;
+
+  const classNames = BorderType[type] + " overflow-hidden w-72 h-72";
+
+  return <div className={classNames}>{children}</div>;
 };
 
 export default React.memo(Border);

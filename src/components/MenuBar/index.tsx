@@ -1,6 +1,6 @@
 import { Icon } from "@material-ui/core";
 import React from "react";
-import NavBar from "../nav-bar";
+import NavBar from "../NavBar";
 
 const Logo: React.FC = () => {
   return (
