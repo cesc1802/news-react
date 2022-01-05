@@ -3,63 +3,59 @@ import HotNews, { TextHoverable } from "../../components/HotNews";
 
 const ListHotNews: React.FC = () => {
   return (
-    <div className="flex flex-col">
-      <div className="flex justify-around">
-        <div className="py-1 pr-1">
-          <HotNews
-            url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
-            rounded={true}
-          >
-            <TextHoverable text="Tạ ơn công bố thành lập tân giáo xứ Thanh Lãm" />
-          </HotNews>
-        </div>
-
-        <div className="py-1 pr-1">
-          <HotNews
-            url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
-            rounded={true}
-          >
-            <TextHoverable text="Tạ ơn công bố thành lập tân giáo xứ Thanh Lãm" />
-          </HotNews>
-        </div>
-
-        <div className="py-1 pr-1">
-          <HotNews
-            url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
-            rounded={true}
-          >
-            <TextHoverable text="Tạ ơn công bố thành lập tân giáo xứ Thanh Lãm" />
-          </HotNews>
-        </div>
+    <div className="flex flex-wrap">
+      <div className="w-1/3">
+        <HotNews
+          url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
+          rounded={true}
+        >
+          <TextHoverable text="Tạ ơn công bố thành lập tân giáo xứ Thanh Lãm" />
+        </HotNews>
       </div>
 
-      <div className="flex justify-around">
-        <div className="py-1 pr-1">
-          <HotNews
-            url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
-            rounded={true}
-          >
-            <TextHoverable text="Tạ ơn công bố thành lập tân giáo xứ Thanh Lãm" />
-          </HotNews>
-        </div>
+      <div className="w-1/3">
+        <HotNews
+          url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
+          rounded={true}
+        >
+          <TextHoverable text="Tạ ơn công bố thành lập tân giáo xứ Thanh Lãm" />
+        </HotNews>
+      </div>
 
-        <div className="py-1 pr-1">
-          <HotNews
-            url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
-            rounded={true}
-          >
-            <TextHoverable text="Tạ ơn công bố thành lập tân giáo xứ Thanh Lãm" />
-          </HotNews>
-        </div>
+      <div className="w-1/3">
+        <HotNews
+          url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
+          rounded={true}
+        >
+          <TextHoverable text="Tạ ơn công bố thành lập tân giáo xứ Thanh Lãm" />
+        </HotNews>
+      </div>
 
-        <div className="py-1 pr-1">
-          <HotNews
-            url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
-            rounded={true}
-          >
-            <TextHoverable text="Tạ ơn công bố thành lập tân giáo xứ Thanh Lãm" />
-          </HotNews>
-        </div>
+      <div className="w-1/3">
+        <HotNews
+          url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
+          rounded={true}
+        >
+          <TextHoverable text="Tạ ơn công bố thành lập tân giáo xứ Thanh Lãm" />
+        </HotNews>
+      </div>
+
+      <div className="w-1/3">
+        <HotNews
+          url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
+          rounded={true}
+        >
+          <TextHoverable text="Tạ ơn công bố thành lập tân giáo xứ Thanh Lãm" />
+        </HotNews>
+      </div>
+
+      <div className="w-1/3">
+        <HotNews
+          url="https://www.tonggiaophanhanoi.org/wp-content/uploads/2022/01/101303-ta-on-3.jpg"
+          rounded={true}
+        >
+          <TextHoverable text="Tạ ơn công bố thành lập tân giáo xứ Thanh Lãm" />
+        </HotNews>
       </div>
     </div>
   );
